@@ -31,7 +31,7 @@ body {
 
 .divTable{
 	display: table;
-	width: 100%;
+	width: 600px;
 }
 .divTableRow {
 	display: table-row;
@@ -44,4 +44,8 @@ body {
 }
 .divTableBody {
 	display: table-row-group;
+}
+.divPage{
+	display: table;
+	width: 800px;
 }
