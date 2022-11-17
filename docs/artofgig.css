@@ -1,6 +1,6 @@
 body {
  line-height: 1.2;
- background: #DCDCDC;
+ background: #fbfbfb;
 }
 #pagebox {
  background: #ffffff;
@@ -29,23 +29,4 @@ body {
  display: inline;
 }
 
-.divTable{
-	display: table;
-	max-width: 600px;
-}
-.divTableRow {
-	display: table-row;
-}
-.divTableCell{
-	border: 0px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
-  vertical-align: text-top;
-}
-.divTableBody {
-	display: table-row-group;
-}
-.divPage{
-	display: table;
-	max-width: 800px;
 }
