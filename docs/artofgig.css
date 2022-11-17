@@ -31,7 +31,7 @@ body {
 
 .divTable{
 	display: table;
-	width: 600px;
+	max-width: 600px;
 }
 .divTableRow {
 	display: table-row;
@@ -47,5 +47,5 @@ body {
 }
 .divPage{
 	display: table;
-	width: 800px;
+	max-width: 800px;
 }
