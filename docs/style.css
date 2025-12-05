@@ -152,3 +152,97 @@ ol.toc li { margin: 0.35rem 0; }
     flex-direction: column;
   }
 }
+/* Art of Gig overall layout tweaks */
+
+.aog-intro {
+  margin-bottom: 1.5rem;
+}
+
+.aog-volumes {
+  margin-bottom: 2rem;
+}
+
+.aog-volumes-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.volume-card {
+  flex: 1 1 280px;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 1rem;
+}
+
+.volume-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Smaller covers for Volumes 1 and 2 */
+.volume-cover img {
+  max-width: 110px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.volume-copy p {
+  margin-top: 0;
+}
+
+/* Yakverse (Volume 3) layout: TOC + cover side by side */
+
+.yakverse-section {
+  margin-top: 2rem;
+}
+
+.yakverse-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.yakverse-toc-col {
+  flex: 1 1 55%;
+}
+
+.yakverse-cover-col {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.yakverse-cover-image {
+  max-width: 220px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* TOC spacing inside index */
+
+.toc {
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 700px) {
+  .aog-volumes-layout,
+  .yakverse-layout {
+    flex-direction: column;
+  }
+
+  .yakverse-toc-col,
+  .yakverse-cover-col {
+    flex: 1 1 100%;
+  }
+
+  .yakverse-cover-image {
+    max-width: 60%;
+  }
+}
