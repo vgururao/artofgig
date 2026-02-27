@@ -89,6 +89,14 @@ Intended for import into Vellum for ebook/print production.
 - `book/` and `vol1/`, `vol2/` contain large binaries — gitignored, never commit
 - Python 3.9 compatibility in all scripts (no backslashes in f-string expressions)
 
+## Next session priorities
+
+1. **Website upgrade (docs/)** — style improvements: improve chapter nav bar styling
+   (boxed, consistent with twitterarchive conventions), review overall typography,
+   add any missing mobile polish. Review all 13 chapter pages in browser first.
+2. **Vellum import** — open `artofgig_vol3_YYYYMMDD.docx` in Vellum, check style
+   mapping (BodyText, ChapterMeta, ChapterImage), adjust as needed for ebook/print layout.
+
 ## After each work session
 
 Update `status.md` to reflect current state.
