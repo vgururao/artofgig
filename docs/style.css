@@ -246,3 +246,46 @@ ol.toc li { margin: 0.35rem 0; }
     max-width: 60%;
   }
 }
+
+/* ── Mobile: ≤600px ──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 1rem 0.75rem 0.25rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.35rem;
+  }
+
+  .main-wrapper {
+    padding: 0.75rem 0.75rem 2rem;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .chapter-title {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.97rem;
+  }
+
+  .chapter-nav {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+  }
+
+  .chapter-nav a {
+    padding: 0.35rem 0.6rem;
+  }
+
+  .chapter-image img {
+    border-radius: 4px;
+  }
+}

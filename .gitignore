@@ -1,0 +1,16 @@
+# Large binary production files — present locally, not pushed to GitHub
+vol1/
+vol2/
+book/
+
+# Source archives
+artofgig-export-*/
+ArtOfGig_game_artwork/
+artofgig_images/
+
+# Stray binaries
+*.psd
+Art\ of\ Gig\ Covid\ Special\ Articles.pdf
+
+# macOS
+.DS_Store
