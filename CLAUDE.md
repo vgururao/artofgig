@@ -110,9 +110,7 @@ python3 /Users/Venkat/Dropbox/Code/Publishing/online_book_builder/sync.py docs/
 
 ## Next session priorities
 
-1. **Review in browser** — open artofgig.com locally, check index, front matter pages,
-   and a few chapters. Verify book-nav colors, float nav positioning, mobile layout.
-2. **Vellum import** — open `artofgig_vol3_YYYYMMDD.docx` in Vellum, check style
+1. **Vellum import** — open `artofgig_vol3_YYYYMMDD.docx` in Vellum, check style
    mapping (BodyText, ChapterMeta, ChapterImage), adjust as needed for ebook/print layout.
 
 ## After each work session
