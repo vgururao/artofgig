@@ -6,8 +6,10 @@
 <title>The Yakverse Chronicles | Endgame</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="article" property="og:type"/><meta content="Art of Gig" property="og:site_name"/><meta content="The Yakverse Chronicles | Endgame" property="og:title"/><meta content="in which the whole Yakverse affair wraps up, sort of, and endings turn out to be just new frames." property="og:description"/><meta content="https://artofgig.com/endgame.html" property="og:url"/><meta content="https://artofgig.com/images/endgame.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="The Yakverse Chronicles | Endgame" name="twitter:title"/><meta content="in which the whole Yakverse affair wraps up, sort of, and endings turn out to be just new frames." name="twitter:description"/><meta content="https://artofgig.com/images/endgame.jpg" name="twitter:image"/>
 <link href="style.css" rel="stylesheet"/>
+<link href="book-nav.css" rel="stylesheet"/>
 </head>
 <body>
+<nav class="book-nav"><div class="nav-left"><a class="nav-link nav-prev" href="infinity_gig.html"><span class="nav-arrow">&larr;</span><span class="nav-label">Infinity Gig</span></a></div><div class="nav-center"><a class="nav-link nav-toc" href="toc.html">Table of Contents</a></div><div class="nav-right"><span class="nav-link nav-next disabled"><span class="nav-label">—</span><span class="nav-arrow">&rarr;</span></span></div></nav>
 <header class="site-header">
 <h1>The Yakverse Chronicles</h1>
 <div class="subtitle">Being the true account of certain fantastical adventures in consulting.</div>
@@ -170,25 +172,14 @@
 <li id="fn2">1 — <a href="index.html">index.html</a></li>
 </ol>
 </section>
-<nav class="chapter-nav">
-<div class="nav-prev"><a href="infinity_gig.html">← Infinity Gig</a></div>
-<div class="nav-home"><a href="index.html">Table of Contents</a></div>
-<div></div>
-</nav>
+<nav class="book-nav"><div class="nav-left"><a class="nav-link nav-prev" href="infinity_gig.html"><span class="nav-arrow">&larr;</span><span class="nav-label">Infinity Gig</span></a></div><div class="nav-center"><a class="nav-link nav-toc" href="toc.html">Table of Contents</a></div><div class="nav-right"><span class="nav-link nav-next disabled"><span class="nav-label">—</span><span class="nav-arrow">&rarr;</span></span></div></nav>
 </main>
 </div>
 <footer class="site-footer">
 <div>© Venkatesh Rao, 2021. Part of <a href="index.html">The Yakverse Chronicles</a>, Vol. 3 of <a href="https://artofgig.com">Art of Gig</a>.</div>
 </footer>
-<script>
-(function() {
-  var prev = "infinity_gig.html";
-  var next = null;
-  document.addEventListener('keydown', function(e) {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-    if (e.key === 'ArrowLeft'  && prev) location.href = prev;
-    if (e.key === 'ArrowRight' && next) location.href = next;
-  });
-})();
-</script></body>
+<a class="float-nav float-nav-prev" href="infinity_gig.html" title="Previous chapter"><span class="float-nav-chevron">&lsaquo;</span><span class="float-nav-label">Prev</span></a>
+<div class="float-nav-right"><a class="float-nav-btn float-nav-toc" href="toc.html" title="Table of Contents"><span class="float-nav-chevron">&and;</span><span class="float-nav-label">ToC</span></a><span class="float-nav-btn float-nav-next disabled"><span class="float-nav-chevron">&rsaquo;</span><span class="float-nav-label">Next</span></span></div>
+<script src="book-nav.js"></script>
+</body>
 </html>

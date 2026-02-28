@@ -44,14 +44,20 @@ artofgig/
 ├── vol2/               ← GITIGNORED — Vol 2 EPUBs, PSD, rough cuts
 ├── vol3/               ← TRACKED — scripts for Vol 3 manuscript generation
 │   ├── CLAUDE.md
-│   └── generate_docx.py
+│   ├── generate_docx.py
+│   └── update_nav.py   ← updates book-nav in all 13 chapter HTML files
 │
 ├── book/               ← GITIGNORED — legacy; Yakverse Rough Cuts still here
 │
 └── docs/               ← TRACKED — GitHub Pages site source
-    ├── index.html
-    ├── style.css
-    ├── *.html          (13 Yakverse chapter pages)
+    ├── index.html      (3-box card grid: Vol 1/2/3)
+    ├── style.css       (site styles + book-nav overrides)
+    ├── book-nav.css    (synced from online_book_builder/)
+    ├── book-nav.js     (synced from online_book_builder/)
+    ├── vol3_cover.html (Vol 3 front matter)
+    ├── vol3_title.html (Vol 3 front matter)
+    ├── toc.html        (Vol 3 table of contents)
+    ├── *.html          (13 Yakverse chapter pages, all with book-nav)
     └── images/         (chapter illustrations)
 ```
 
@@ -89,11 +95,23 @@ Intended for import into Vellum for ebook/print production.
 - `book/` and `vol1/`, `vol2/` contain large binaries — gitignored, never commit
 - Python 3.9 compatibility in all scripts (no backslashes in f-string expressions)
 
+## Nav update workflow
+
+To update nav on all 13 chapters (e.g. after changing sequence or labels):
+```bash
+python3 vol3/update_nav.py
+```
+Idempotent — safe to run multiple times.
+
+To sync nav CSS/JS from the shared library:
+```bash
+python3 /Users/Venkat/Dropbox/Code/Publishing/online_book_builder/sync.py docs/
+```
+
 ## Next session priorities
 
-1. **Website upgrade (docs/)** — style improvements: improve chapter nav bar styling
-   (boxed, consistent with twitterarchive conventions), review overall typography,
-   add any missing mobile polish. Review all 13 chapter pages in browser first.
+1. **Review in browser** — open artofgig.com locally, check index, front matter pages,
+   and a few chapters. Verify book-nav colors, float nav positioning, mobile layout.
 2. **Vellum import** — open `artofgig_vol3_YYYYMMDD.docx` in Vellum, check style
    mapping (BodyText, ChapterMeta, ChapterImage), adjust as needed for ebook/print layout.
 

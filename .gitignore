@@ -12,5 +12,9 @@ artofgig_images/
 *.psd
 Art\ of\ Gig\ Covid\ Special\ Articles.pdf
 
+# Python
+__pycache__/
+*.pyc
+
 # macOS
 .DS_Store

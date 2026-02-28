@@ -65,3 +65,14 @@ After each work session, update this file:
   - Added keyboard left/right arrow navigation to all chapter pages
   - Updated footer text on all chapter pages
   - Added ≤600px mobile breakpoint to style.css
+
+### 2026-02-27 (session 3) — full site refresh implemented
+- Created `Publishing/online_book_builder/` shared library:
+  - `book-nav.css` — inline book-nav bar + floating side nav, with `--nav-*` CSS vars (sepia defaults)
+  - `book-nav.js` — keyboard arrow-key nav (clicks float-nav-prev/next)
+  - `sync.py` — copies files to target docs/; `README.md` with full CSS var reference
+- Synced `book-nav.css` + `book-nav.js` to `artofgig/docs/`
+- Updated `docs/style.css`: added `--nav-*` overrides (artofgig blue palette), `.book-box-grid`/`.book-box` card styles, `.titlepage` styles, removed old `.chapter-nav` rules
+- Redesigned `docs/index.html`: replaced 2-up volumes + inline TOC with 3-box card grid (one per volume); Vol 3 card links to `vol3_cover.html`
+- Created Vol 3 front matter pages: `vol3_cover.html`, `vol3_title.html`, `toc.html` (all with book-nav)
+- Wrote `vol3/update_nav.py` — idempotent script; updates all 13 chapter HTML files with book-nav bars, float nav, keyboard script; ran successfully on all 13 chapters

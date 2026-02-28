@@ -5,6 +5,16 @@
   --accent: #4a6fa5;
   --accent-soft: #d7e3f6;
   --border-soft: #e0d7c8;
+
+  /* book-nav.css overrides */
+  --nav-bg:           var(--accent-soft);
+  --nav-border:       var(--border-soft);
+  --nav-fg:           var(--accent);
+  --nav-label:        var(--fg);
+  --nav-arrow:        var(--accent);
+  --nav-hover:        #2d4f80;
+  --nav-outer-offset: 400px;
+  --nav-max-width:    760px;
 }
 * { box-sizing: border-box; }
 body {
@@ -80,25 +90,7 @@ ol.toc li { margin: 0.35rem 0; }
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
-.chapter-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-top: 2.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-soft);
-  font-size: 0.9rem;
-}
-.chapter-nav a {
-  background: var(--accent-soft);
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-.chapter-nav a:hover {
-  background: var(--accent);
-  color: white;
-}
+/* .chapter-nav removed — replaced by book-nav.css */
 
 .footnotes {
   font-size: 0.85rem;
@@ -158,92 +150,121 @@ ol.toc li { margin: 0.35rem 0; }
   margin-bottom: 1.5rem;
 }
 
-.aog-volumes {
-  margin-bottom: 2rem;
-}
-
-.aog-volumes-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-
-.volume-card {
-  flex: 1 1 280px;
-  border-top: 1px solid var(--border-soft);
-  padding-top: 1rem;
-}
-
-.volume-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-/* Smaller covers for Volumes 1 and 2 */
-.volume-cover img {
-  max-width: 110px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-}
-
-.volume-copy p {
-  margin-top: 0;
-}
-
-/* Yakverse (Volume 3) layout: TOC + cover side by side */
-
-.yakverse-section {
-  margin-top: 2rem;
-}
-
-.yakverse-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-
-.yakverse-toc-col {
-  flex: 1 1 55%;
-}
-
-.yakverse-cover-col {
-  flex: 1 1 35%;
-  text-align: center;
-}
-
-.yakverse-cover-image {
-  max-width: 220px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* TOC spacing inside index */
-
+/* TOC spacing (used in toc.html) */
 .toc {
   padding-left: 1.25rem;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
 
+/* ── 3-box book card grid (index.html) ───────────────────────── */
+
+.book-box-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.book-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 1.25rem;
+  background: rgba(255,255,255,0.7);
+}
+
+.book-box-cover {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.book-box h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.book-box p {
+  font-size: 0.9rem;
+  color: #444;
+  flex: 1;
+  margin: 0 0 1rem;
+}
+
+.book-box-editions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+.book-box-editions a {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.book-box-editions a:hover {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+
+.edition-soon {
+  color: #999;
+  padding: 0.25rem 0;
+  font-style: italic;
+}
+
+/* titlepage (vol3_title.html) */
+.titlepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  padding: 2rem 1rem;
+}
+.titlepage h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+}
+.titlepage .subtitle {
+  font-size: 1.05rem;
+  color: #666;
+  margin: 0 0 1.5rem;
+}
+.titlepage .byline {
+  font-size: 1.1rem;
+  color: var(--fg);
+  margin: 0 0 1rem;
+}
+.titlepage .edition-note {
+  font-size: 0.88rem;
+  color: #777;
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+.titlepage .copyright {
+  font-size: 0.82rem;
+  color: #999;
+  margin: 0.5rem 0 0;
+}
+
 @media (max-width: 700px) {
-  .aog-volumes-layout,
-  .yakverse-layout {
-    flex-direction: column;
-  }
-
-  .yakverse-toc-col,
-  .yakverse-cover-col {
-    flex: 1 1 100%;
-  }
-
-  .yakverse-cover-image {
-    max-width: 60%;
+  .book-box-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -273,16 +294,6 @@ ol.toc li { margin: 0.35rem 0; }
 
   p {
     font-size: 0.97rem;
-  }
-
-  .chapter-nav {
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    font-size: 0.82rem;
-  }
-
-  .chapter-nav a {
-    padding: 0.35rem 0.6rem;
   }
 
   .chapter-image img {
